@@ -1,0 +1,94 @@
+# ээээээ
+# some experiments with trigonometry
+( lambda w, h, half, sinus, put, puts, init, wedge, display, circle, string :
+string ( ( w + 1 ) * 1 + 2, '', 0,
+display (
+wedge ( w ,
+
+
+# puts ( puts, put, init ( w, h ), 4, [ ( ( 0x340375023 ) * i ^ ( 0xf782a231 ) * i ) % ( w * h ) for i in range ( 50 ) ] ) ,
+
+# circle (
+# __ half (
+____ sinus ( puts, put, init ( w, h ), w, h, lambda v : v + 1, 2 ) ,
+# __ w, h, 0.6, 2 ) ,
+# w, h, 0.25, 0.47, 0.5, lambda b : b + ( 1 if b == 0 else module ( 'random' ).randint ( 0, 1 ) ) ) ,
+
+wedge ) ,
+[ '+', '0', '3', 'o', 'D' ] ) ) ) (
+
+# w, h : Int, Int
+35, 15,
+
+# half : Display -> Int -> Int -> Float -> Symbol -> Display
+( lambda a, w, h, n, s : [ ( s if int ( i / w ) >= h * n else v ) for i, v in enumerate ( a ) ] ),
+
+# type alias Symbol = Int
+# type alias Display = List Symbol
+
+
+
+# sinus : puts -> put -> Display -> Int -> Int -> Filter -> Int -> Display
+( lambda puts, put, a, w, h, filter, l :
+puts ( puts, put, a, 4,
+__ [
+____ int ( x + w * ( h - 1 ) * ( module( 'math' ).cos ( x / w * 1.5 ) / 2 + 0.5 ) )
+______ for x in range ( w ) ] ) ) ,
+
+
+
+# # vertical : puts -> put -> Display -> Int -> Int -> Filter -> Int -> Display
+# ( lambda puts, put, a, w, h, filter, l :
+# puts ( puts, put, a, 4,
+# __ [
+# ____ int ( 20 + y * w )
+# ______ for y in range ( h ) ] ) ) ,
+
+
+
+
+# ________ ( x, x / w ) for x in range ( w ) ] ] ) ) ,
+
+# ________ ( module( 'math' ).sin ( ( i / w ) / h * 3.1415 * l ) / 2 + 0.5, i, v )
+# __________ for i, v in enumerate ( a ) ] ] ) ) ,
+
+
+# type alias Index = Int
+
+
+# put : Display -> Index -> Symbol -> Display
+( lambda a, index, s : a[ :index ] + [ s ] + a[ index+1: ] ) ,
+
+
+
+# puts : puts -> put -> Display -> Symbol -> List Index -> Display
+( lambda puts, put, a, s, iis : put ( a, iis[ 0 ], s ) if len ( iis ) <= 1 else puts ( puts, put, put ( a, iis[ 0 ], s ), s, iis[ 1: ] ) ) ,
+
+
+# init : Int -> Int -> List Int
+( lambda w, h : [ 0 ] * w * h ),
+
+# type alias SlicedDisplay = List Display
+
+# wedge : Int -> Display -> wedge -> SlicedDisplay
+( lambda w, a, wedge : [ a[ :w ] ] + wedge ( w, a[ w: ], wedge ) if len ( a ) else a ),
+
+# type alias Character = python-string
+# type alias String = python-string
+
+# display : SlicedDisplay -> List Character -> String
+( lambda a, dic : '\n'.join ( ''.join ( dic [ c ] for c in b ) for b in a ) ),
+
+# type alias Filter = Symbol -> Symbol
+
+# circle : Display -> Int -> Int -> Float -> Float -> Float -> Filter -> Display
+( lambda a, w, h, r, dx, dy, f : [
+__ ( f ( v ) if ( pow ( x - dx, 2 ) + pow ( y - dy, 2 ) <= pow ( r, 2 ) ) else v )
+____ for ( x, y, v ) in [
+______ ( i % w / w, int ( i / w ) / h, v )
+________ for i, v in enumerate ( a ) ] ] ) ,
+
+# string : Int -> String -> Int -> String -> String
+( lambda i, m, ad, d : d[ :i ] + m + d[ i+len(m)-ad: ] ) ,
+
+)
