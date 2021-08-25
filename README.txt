@@ -28,6 +28,6 @@ addition in syntax unforgivenessness:
 
 if u still wonder what the fuck is going on, here is lil' preambule:
   i was high and discovered that lambda-expressions in python are actually functionally-full ( such wow! ) ;
-  so i tried to write brainfuck interpreter ( almost succeeded ), and some other stuff using ONLY python lambda expressions ;
+  so i tried to write brainfuck interpreter ( almost succeeded, see bf.py ), and some other stuff using ONLY python lambda expressions ;
   and if u think "meh, this must be as easy as writing in pure python" ur wrong, ok? behavior of lambdas is far more complicated ;
   that's all.
