@@ -1,4 +1,4 @@
-the evil python3-lambda evaluator for natsuki ( https://vk.com/public206129973 )
+the evil python3-lambda evaluator
 
 lambda.py -- python λ evaluator
 
